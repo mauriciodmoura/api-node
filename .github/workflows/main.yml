@@ -36,4 +36,4 @@ jobs:
           script: |
             cd ~/app/api-node
             ./node_modules/.bin/typeorm migration:run -d ./dist/data-source.js
-            pm2 restart api-node            
+            pm2 start api-node            
