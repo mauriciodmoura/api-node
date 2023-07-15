@@ -24,4 +24,16 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "."
-          target: "~/app/api-node"
+          target: "~/app/api-node"          
+          
+      - name: Update API
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ~/app/api-node
+            ./node_modules/.bin/typeorm migration:run -d ./dist/data-source.js
+            pm2 restart api-node            
