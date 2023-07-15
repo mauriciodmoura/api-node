@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "."
+          source: "., !node_modules"
           target: "~/app/api-node"          
           
       - name: Update API
@@ -36,4 +36,4 @@ jobs:
           script: |
             cd ~/app/api-node
             ./node_modules/.bin/typeorm migration:run -d ./dist/data-source.js
-            pm2 start api-node            
+            pm2 restart api-node            
