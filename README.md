@@ -1,40 +1,40 @@
-# Aplicação: RentCars
+# Aplication: RentCars
 
-Bem-vindo ao RentCar, a solução perfeita para facilitar o processo de aluguel de carros. Uma experiência prática e eficiente para alugar o veículo.
+Welcome to RentCar, the perfect solution to streamline the car rental process. A practical and efficient experience for renting a vehicle.
 
-Com uma ampla variedade de dados, desde informações sobre veículos e disponibilidade até perfis de usuários e transações. O backend, construído com segurança em mente, protege esses dados preciosos para que você possa ter tranquilidade enquanto aproveita a experiência de aluguel de carros. 
+With a wide range of data, from vehicle information and availability to user profiles and transactions. The backend, built with security in mind, safeguards this precious data so you can have peace of mind while enjoying the car rental experience.
 
-Um backend robusto é a base para uma experiência de aluguel de carros excepcional. Nosso sistema backend foi projetado com tecnologia de ponta para garantir que você tenha um processo simplificado, seguro e eficiente do início ao fim.
+A robust backend is the foundation for an exceptional car rental experience. Our backend system has been designed with cutting-edge technology to ensure you have a streamlined, secure, and efficient process from start to finish.
 
 
-**TÉCNOLOGIAS UTILIZADAS**
+
 TypeScript
 Node.JS
 TypeORM
 Docker
 
 
-### Como funciona
+### HOW WORKS
 
-**Cadastros e Logins**
-É possível cadastrar um novo carro.
-É cadastrar uma especificação para um carro
-É possível cadastrar a imagem do carro
-É possível cadastrar um aluguel
-Deve ser possível o usuário recuperar a senha informando o e-mail
-O usuário deve receber um e-mail com o passo a passo para a recuperação da senha
-O usuário deve conseguir inserir uma nova senha
-O usuário precisa informar uma nova senha
-O link enviado para a recuperação deve expirar em 3 horas
+**Registration and Login**
+It should be possible to register a new car.
+It should be possible to register specifications for a car.
+It should be possible to register the car's image.
+It should be possible to register a rental.
+Users should be able to recover their password by providing their email.
+Users should receive an email with the step-by-step instructions for password recovery.
+Users should be able to set a new password.
+Users need to provide a new password.
+The recovery link sent should expire in 3 hours.
 
-**Aluguel**
-O aluguel deve ter duração mínima de 24 horas.
-Ao realizar um aluguel, o status do carro deverá ser - alterado para indisponível
-O usuário deve estar logado na aplicação
-Deve ser possível realizar a busca de todos os alugueis para o usuário
-Ao realizar a devolução, o carro deverá ser liberado para - outro aluguel.
-Ao realizar a devolução, o usuário deverá ser liberado - para outro aluguel.
-Ao realizar a devolução, deverá ser calculado o total do - aluguel.
-Caso o horário de devolução seja superior ao horário - previsto de entrega, deverá ser cobrado multa - proporcional aos dias de atraso.
-Caso haja multa, deverá ser somado ao total do aluguel.
+**Rental**
+The rental should have a minimum duration of 24 hours.
+When a rental is made, the car's status should be changed to unavailable.
+Users should be logged into the application.
+It should be possible to search for all rentals for the user.
+When returning the car, it should be made available for another rental.
+When returning the car, the user should be made available for another rental.
+When returning the car, the total rental amount should be calculated.
+If the return time exceeds the scheduled delivery time, a proportional late fee should be charged.
+If there is a late fee, it should be added to the total rental amount.
 
