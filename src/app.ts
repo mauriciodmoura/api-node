@@ -7,10 +7,14 @@ import swaggerUi from 'swagger-ui-express';
 import "./shared/container"
 import { router } from './routes';
 import swaggerFile from "./swagger.json"; 
+import rateLimiter from "./middlewares/rateLimiter"
 import { AppDataSource } from './data-source';
 import { AppError } from './errors/AppError';
 
 const app = express();
+
+app.use(rateLimiter);
+
 app.use(express.json());
 
 AppDataSource.initialize().then(() => {    
